@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 import uvicorn
 
 app = FastAPI()
@@ -66,5 +66,6 @@ def fence_cipher_decrypt(text):
 
 
 if __name__ == "__main__":
-    uvicorn.run()
+    uvicorn.run(app, host="localhost", port=8000)
+
 
